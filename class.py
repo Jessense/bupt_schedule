@@ -81,7 +81,7 @@ while index2 < len(events):
     f2.write("DTSTART:%d%02d%02dT%04d00\n" % (dic['year'], dic['month'], dic['day'], dic['starttime']))
     f2.write("DTEND:%d%02d%02dT%04d00\n" % (dic['year'], dic['month'], dic['day'], dic['endtime']))
     f2.write("RRULE:FREQ=WEEKLY;INTERVAL=%d;COUNT=%d\n" % (dic['interval'], dic['count']))
-    f2.write("SUMMARY=%s%s\n" % (dic['name'], dic['place']))
+    f2.write("SUMMARY:%s%s\n" % (dic['name'], dic['place']))
     f2.write("END:VEVENT\n")
     index2 += 1
 f2.write("END:VCALENDAR\n")
